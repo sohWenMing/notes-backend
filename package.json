@@ -4,14 +4,21 @@
   "description": "> At the point of this writing, after everything is setup, we will begin working on testing.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "lint": "npx eslint . "
   },
   "author": "Soh Wen Ming",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.2.4",
+    "winston": "^3.13.0"
   },
   "devDependencies": {
+    "@stylistic/eslint-plugin-js": "^1.7.0",
+    "eslint": "^8.57.0",
     "nodemon": "^3.1.0"
   }
 }

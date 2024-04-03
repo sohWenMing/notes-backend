@@ -1,0 +1,78 @@
+{
+  message: { URL: '/', method: 'GET', body: {} },
+  level: 'http',
+  timestamp: '2024-04-03T04:11:58.497Z'
+}
+{
+  message: { url: '/api/blog/something', method: 'GET', body: {} },
+  level: 'info',
+  timestamp: '2024-04-03T04:30:03.053Z'
+}
+{
+  message: { url: '/api/blog/something', method: 'GET', body: {} },
+  level: 'info',
+  timestamp: '2024-04-03T04:31:26.159Z'
+}
+{
+  message: { url: '/api/blog/something', method: 'GET', body: {} },
+  level: 'info',
+  timestamp: '2024-04-03T04:32:08.997Z'
+}
+{
+  message: { url: '/api/blog/something', method: 'GET', body: {} },
+  level: 'info',
+  timestamp: '2024-04-03T04:33:06.795Z'
+}
+{
+  message: { url: '/api/blog/something', method: 'GET', body: {} },
+  level: 'info',
+  timestamp: '2024-04-03T04:35:04.892Z'
+}
+{
+  message: { url: '/api/blog/something', method: 'GET', body: {} },
+  level: 'info',
+  timestamp: '2024-04-03T04:35:35.583Z'
+}
+{
+  message: { url: '/api/blog/something', method: 'GET', body: {} },
+  level: 'info',
+  timestamp: '2024-04-03T04:40:49.109Z'
+}
+{
+  message: { url: '/api/blog/something', method: 'GET', body: {} },
+  level: 'info',
+  timestamp: '2024-04-03T04:41:23.888Z'
+}
+{
+  message: { url: '/api/blog/testPost', method: 'POST', body: {} },
+  level: 'info',
+  timestamp: '2024-04-03T04:44:40.454Z'
+}
+{
+  message: { url: '/api/blog/testPost', method: 'POST', body: {} },
+  level: 'info',
+  timestamp: '2024-04-03T04:45:00.934Z'
+}
+{
+  message: { url: '/api/blog/testPost', method: 'POST', body: {} },
+  level: 'info',
+  timestamp: '2024-04-03T04:46:28.405Z'
+}
+{
+  message: {
+    url: '/api/blog/testPost',
+    method: 'POST',
+    body: { 'test body': 'test body' }
+  },
+  level: 'info',
+  timestamp: '2024-04-03T04:47:57.834Z'
+}
+{
+  message: {
+    url: '/api/blog/testPost',
+    method: 'POST',
+    body: { 'test body': 'test body', 'test body 2': 'test body 2' }
+  },
+  level: 'info',
+  timestamp: '2024-04-03T04:48:24.235Z'
+}
