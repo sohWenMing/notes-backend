@@ -1,6 +1,8 @@
 const { createLogger, format, transports } = require('winston');
 const { combine, timestamp, prettyPrint, errors } = format;
 const path = require('path');
+const { NODE_ENV } = require('./config');
+console.log('node_env: ', NODE_ENV);
 
 const consoleLogger = createLogger({
     level: 'info',
@@ -47,13 +49,15 @@ function requestLogger(req, res, next) {
     for(let key in message.body) {
         bodyString += `${key}: ${message.body[key]} `;
     }
-    consoleLogger.info(
-    `
-    url: ${message.url} 
-    method: ${message.method} 
-    body: ${bodyString ? bodyString : 'no body recorded'}
-    `);
-    combinedFileLogger.info(message);
+    if(NODE_ENV !=='test') {
+        consoleLogger.info(
+            `
+            url: ${message.url} 
+            method: ${message.method} 
+            body: ${bodyString ? bodyString : 'no body recorded'}
+            `);
+        combinedFileLogger.info(message);
+    }
     next();
 }
 
@@ -63,16 +67,18 @@ function errorLogger(err) {
         'Error Message: ': err.message,
         'Error Stack: ': err.stack
     };
-    consoleLogger.error(
-        `
-        Error Details
-        ---------------------------
-        Error Name: ${err.name}
-        Error Message: ${err.message}
-        Error Stack: ${err.stack}
-        -----------------------------`
-    );
-    errorFileLogger.error(message);
+    if(NODE_ENV !== 'test') {
+        consoleLogger.error(
+            `
+            Error Details
+            ---------------------------
+            Error Name: ${err.name}
+            Error Message: ${err.message}
+            Error Stack: ${err.stack}
+            -----------------------------`
+        );
+        errorFileLogger.error(message);
+    }
 }
 
 

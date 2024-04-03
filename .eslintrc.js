@@ -25,7 +25,7 @@ module.exports = {
         'ecmaVersion': 'latest'
     },
     'rules': {
-        'no-unused-vars': ['error', { 'varsIgnorePattern': '(next|err)' }],
+        'no-unused-vars': ['error', { 'varsIgnorePattern': '^(next|err)$' }],
         '@stylistic/js/quotes': ['error', 'single'],
         '@stylistic/js/linebreak-style': ['error', 'unix'],
         '@stylistic/js/object-curly-spacing': ['error', 'always'],

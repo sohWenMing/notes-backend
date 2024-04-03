@@ -1,16 +1,9 @@
 const mongoose = require('mongoose');
-const path = require('path');
-require('dotenv').config({
-    'path': path.resolve(__dirname, '../.env')
-});
-
-const PASSWORD = process.env.PASSWORD;
-
-const URL = `mongodb+srv://nindgabeet:${PASSWORD}@cluster0.hb7m3ac.mongodb.net/notesApp?retryWrites=true&w=majority`;
+const { MONGODB_URI } = require('../utils/config');
 
 async function connectToDB() {
     try {
-        await mongoose.connect(URL);
+        await mongoose.connect(MONGODB_URI);
         console.log('connected to MongoDB');
     }
     catch(error) {
