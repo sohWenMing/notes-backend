@@ -1,12 +1,12 @@
 const { createLogger, format, transports } = require('winston');
-const { combine, timestamp, label, prettyPrint } = format;
+const { combine, timestamp, prettyPrint, errors } = format;
 const path = require('path');
 
 const consoleLogger = createLogger({
     level: 'info',
     format: format.cli(),
     transports: [new transports.Console()]
-})
+});
 
 const combinedFileLogger = createLogger({
     level: 'info',
@@ -25,12 +25,14 @@ const errorFileLogger = createLogger({
     level: 'error',
     format: combine(
         timestamp(),
-        prettyPrint()
+        prettyPrint(),
+        errors({ stack: true })
     ),
     transports: [
         new transports.File({
             filename: path.resolve(__dirname, '../logs/error_logs.log')
-        })
+        }),
+        new transports.Console()
     ]
 });
 
@@ -55,12 +57,12 @@ function requestLogger(req, res, next) {
     next();
 }
 
-function errorLogger(err, req, res, next) {
+function errorLogger(err) {
     const message = {
         'Error Name: ': err.name,
         'Error Message: ': err.message,
         'Error Stack: ': err.stack
-    }
+    };
     consoleLogger.error(
         `
         Error Details

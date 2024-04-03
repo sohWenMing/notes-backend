@@ -9,6 +9,7 @@ notesRouter.get('/', async(req, res, next) => {
 
 notesRouter.get('/testPost', async(req, res, next) => {
     try {
+        console.log('testPost ran');
         const testError = new Error('this is a test error');
         testError.name = 'test error';
         throw testError;

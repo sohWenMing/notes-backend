@@ -1,7 +1,7 @@
 POST http://localhost:3000/api/blog/testPost
-
 Content-Type: application/json
 
 {
-    "test body": "test body"
+    "test body": "test body",
+    "test body 2": "test body 2"
 }

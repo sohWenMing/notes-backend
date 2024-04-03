@@ -1,0 +1,19 @@
+{
+  message: {
+    'Error Name: ': 'test error',
+    'Error Message: ': 'this is a test error',
+    'Error Stack: ': 'test error: this is a test error\n' +
+      '    at C:\\Users\\SohWenMing\\notes-backend\\controllers\\notesRoute.js:13:27\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\SohWenMing\\notes-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at next (C:\\Users\\SohWenMing\\notes-backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+      '    at Route.dispatch (C:\\Users\\SohWenMing\\notes-backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\SohWenMing\\notes-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at C:\\Users\\SohWenMing\\notes-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+      '    at Function.process_params (C:\\Users\\SohWenMing\\notes-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\SohWenMing\\notes-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+      '    at Function.handle (C:\\Users\\SohWenMing\\notes-backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+      '    at router (C:\\Users\\SohWenMing\\notes-backend\\node_modules\\express\\lib\\router\\index.js:47:12)'
+  },
+  level: 'error',
+  timestamp: '2024-04-03T05:50:23.195Z'
+}
